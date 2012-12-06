@@ -1,0 +1,4 @@
+form.item-creation input,
+form.item-creation textarea {
+    display: block;
+}
