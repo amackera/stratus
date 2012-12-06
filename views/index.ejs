@@ -13,11 +13,16 @@
         <script type="text/javascript" src="static/client_app.js"></script>
     </head>
     <body>
-        <script type="text/template" id="list-view">
-            <ul></ul> 
+        <script type="text/template" id="list-item">
+            <li>
+                <h3><%- name %></h3>
+                <p><%- details %></p>
+            </li>
         </script>
         <script type="text/template" id="item-creation">
-            <form>
+            <form class="item-creation">
+                <input type="text" class="event-name" placeholder="Event Name..."></input>
+                <textarea class="event-details" placeholder="Event details go here..."></textarea>
                 <input type="button" class="create-event" value="Create Event"></input>
             </form>
         </script>
