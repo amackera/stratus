@@ -1,18 +1,17 @@
 var ListItemView = Backbone.View.extend({
-    tagName: 'li',
-    className: 'list-item',
-    template: '<li><%= content %></li>',
+    template: '#list-item',
     
     initialize: function() {
         this.model.on('change', this.render, this); 
     },
 
     render: function() {
-        var html = _.template(this.template, {
-            content: this.model.get('content')
+        var rendered_template = _.template($(this.template).html())({
+            name: this.model.get('name'),
+            details: this.model.get('details')
         });
 
-        this.$el.html(html);
+        this.$el.html(rendered_template);
 
         return this;
     }
@@ -59,6 +58,11 @@ var ItemCreationView = Backbone.View.extend({
 
     create_event: function(e) {
         e.preventDefault();
-        this.collection.add({ content: 'test content' });
+        var name = this.$el.find('.event-name').val();
+        var details = this.$el.find('.event-details').val();
+        this.collection.add({ 
+            name: name,
+            details: details
+        });
     }
 });
