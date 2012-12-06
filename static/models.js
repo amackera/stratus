@@ -1,6 +1,7 @@
 var ListItem = Backbone.Model.extend({
     defaults: {
-        content: '',
+        name: '',
+        details: '',
         done: false,
     },
 
