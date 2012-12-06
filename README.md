@@ -1,3 +1,3 @@
-# donelist
+# Stratus
 
-Create simple TODO and DONE lists
+Open-source status utility to report vital system statistics
