@@ -5,8 +5,23 @@
         <script type="text/javascript" src="static/jquery.min.js"></script>
         <script type="text/javascript" src="static/underscore.min.js"></script>
         <script type="text/javascript" src="static/backbone.min.js"></script>
+        <script type="text/javascript" src="static/models.js"></script>
+        <script type="text/javascript" src="static/views.js"></script>
         <script type="text/javascript" src="static/client_app.js"></script>
     </head>
     <body>
+        <script type="text/template" id="list-view">
+            <ul></ul> 
+        </script>
+        <script type="text/template" id="item-creation">
+            <form>
+                <input type="button" class="create-event" value="Create Event"></input>
+            </form>
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                window.initialize_app();
+            });
+        </script>
     </body>
 </html>
