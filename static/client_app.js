@@ -1,32 +1,10 @@
-var ListItem = Backbone.Model.extend({
-    defaults: {
-        content: '',
-        done: false,
-    },
+function initialize_app() {
+    // Add a list of downtime events to the page
+    var event_list = new ListCollection();
+    var event_list_view = new ListView({ collection: event_list });
+    $(document).find('body').append(event_list_view.render().$el);
 
-    initialize: function() {}
-});
-
-var ListItemView = Backbone.View.extend({
-    tagName: 'li',
-    className: 'list-item',
-    template: '<p><%= content %></p>',
-    
-    initialize: function() {
-        this.model.on('change', this.render, this); 
-    },
-
-    render: function() {
-        var html = _.template(this.template, {
-            content: this.model.get('content')
-        });
-
-        this.$el.html(html);
-
-        return this;
-    }
-});
-
-var ListCollection = Backbone.Collection.extend({
-    model: ListItem
-});
+    // Add a form to create new downtime events
+    var creation_view = new ItemCreationView({ collection: event_list });
+    $(document).find('body').append(creation_view.$el);
+}
