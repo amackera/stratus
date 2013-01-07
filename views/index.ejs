@@ -4,13 +4,7 @@
         
         <link rel="stylesheet" type="text/css" href="static/style.css"></link>
 
-        <script type="text/javascript" src="static/lib/json2.js"></script>
-        <script type="text/javascript" src="static/lib/jquery.min.js"></script>
-        <script type="text/javascript" src="static/lib/underscore.min.js"></script>
-        <script type="text/javascript" src="static/lib/backbone.min.js"></script>
-        <script type="text/javascript" src="static/models.js"></script>
-        <script type="text/javascript" src="static/views.js"></script>
-        <script type="text/javascript" src="static/client_app.js"></script>
+        <script type="text/javascript" src="static/scripts/require.js" data-main="static/scripts/main.js"></script>
     </head>
     <body>
         <script type="text/template" id="list-item">
@@ -25,11 +19,6 @@
                 <textarea class="event-details" placeholder="Event details go here..."></textarea>
                 <input type="button" class="create-event" value="Create Event"></input>
             </form>
-        </script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                window.initialize_app();
-            });
         </script>
     </body>
 </html>
