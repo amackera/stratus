@@ -12,11 +12,11 @@ Open-source status utility to report vital system statistics.
 
 # .plan
 
-[ ] Basic editable timeline
-[ ] Authentication
-[ ] Integration with AWS CloudWatch
-[ ] Integration with Nagios
-[ ] Plugin-type system
+- [ ] Basic editable timeline
+- [ ] Authentication
+- [ ] Integration with AWS CloudWatch
+- [ ] Integration with Nagios
+- [ ] Plugin-type system
 
 # Architecture
 
