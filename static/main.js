@@ -3,7 +3,9 @@ require.config({
         jquery: 'libs/jquery.min.js',
         backbone: 'libs/backbone.min.js',
         underscore: 'libs/underscore.min.js',
-        marionette: 'libs/backbone.marionette.js'
+        marionette: 'libs/backbone.marionette.js',
+        views: 'views/',
+        models: 'models/'
     },
 
     shim: {
@@ -23,6 +25,12 @@ require.config({
         }
     }
 });
+
+define(['marionette'], function(Marionette) {
+    var Stratus = new Marionette.Application();
+    return Stratus;
+});
+
 /*
 function initialize_app() {
     // Add a list of downtime events to the page
