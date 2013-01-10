@@ -24,8 +24,19 @@ require.config({
     }
 });
 
-define(['marionette'], function(Marionette) {
+define(['backbone', 'marionette'], function(Backbone, Marionette) {
     var Stratus = new Marionette.Application();
+
+    // Add regions to the app
+    Stratus.addRegions({
+        creation: '#event-creation'
+    });
+
+    Stratus.on('initialize:after', function() {
+        if (Backbone.history) {
+            Backbone.history.start();
+        }
+    });
 
     return Stratus
 });
