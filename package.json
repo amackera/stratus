@@ -1,6 +1,6 @@
 {
-    "name": "donelist",
-    "description": "Create simple TODO and DONE lists",
+    "name": "stratus",
+    "description": "Open-source status utility to report vital system statistics.",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
