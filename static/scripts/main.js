@@ -1,9 +1,11 @@
 require.config({
     paths: {
-        jquery: 'lib/jquery.min',
-        backbone: 'lib/backbone.min',
-        underscore: 'lib/underscore.min',
-        marionette: 'lib/backbone.marionette.min'
+        jquery: 'libs/jquery.min.js',
+        backbone: 'libs/backbone.min.js',
+        underscore: 'libs/underscore.min.js',
+        marionette: 'libs/backbone.marionette.js',
+        views: 'views/',
+        models: 'models/'
     },
 
     shim: {
@@ -14,7 +16,7 @@ require.config({
             exports: '_'
         },
         backbone: {
-            deps: ['jquery', 'underscore'],
+            deps: ['jquery', 'underscore']
             exports: 'Backbone'
         },
         marionette: {
@@ -24,21 +26,18 @@ require.config({
     }
 });
 
-define(['backbone', 'marionette'], function(Backbone, Marionette) {
-    var Stratus = new Marionette.Application();
+define([
+    'backbone', 
+    'marionette', 
+    'collections/event/event', 
+    'views/event/creation'
+], function(Backbone, Marionette, EventCollection, EventCreationView) {
+    // List of downtime events
+    var event_collection = new EventCollection();
 
-    // Add regions to the app
-    Stratus.addRegions({
-        creation: '#event-creation'
-    });
-
-    Stratus.on('initialize:after', function() {
-        if (Backbone.history) {
-            Backbone.history.start();
-        }
-    });
-
-    return Stratus
+    // Form to create new downtime events
+    var event_creation_view = new EventCreationView({ collection: event_collection });
+    $(document).find('body').append(event_creation_view.render().$el);
 });
 
 /*
