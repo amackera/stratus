@@ -1,9 +1,9 @@
 require.config({
     paths: {
-        jquery: 'libs/jquery.min.js',
-        backbone: 'libs/backbone.min.js',
-        underscore: 'libs/underscore.min.js',
-        marionette: 'libs/backbone.marionette.js',
+        jquery: 'lib/jquery.min',
+        backbone: 'lib/backbone.min',
+        underscore: 'lib/underscore.min',
+        marionette: 'lib/backbone.marionette.min',
         views: 'views/',
         models: 'models/'
     },
@@ -16,7 +16,7 @@ require.config({
             exports: '_'
         },
         backbone: {
-            deps: ['jquery', 'underscore']
+            deps: ['jquery', 'underscore'],
             exports: 'Backbone'
         },
         marionette: {
@@ -27,17 +27,20 @@ require.config({
 });
 
 define([
+    'jquery',
     'backbone', 
     'marionette', 
     'collections/event/event', 
     'views/event/creation'
-], function(Backbone, Marionette, EventCollection, EventCreationView) {
-    // List of downtime events
-    var event_collection = new EventCollection();
+], function($, Backbone, Marionette, EventCollection, EventCreationView) {
+    $(document).ready(function() {
+        // List of downtime events
+        var event_collection = new EventCollection();
 
-    // Form to create new downtime events
-    var event_creation_view = new EventCreationView({ collection: event_collection });
-    $(document).find('body').append(event_creation_view.render().$el);
+        // Form to create new downtime events
+        var event_creation_view = new EventCreationView({ collection: event_collection });
+        $(document).find('body').append(event_creation_view.render().$el);
+    });
 });
 
 /*
