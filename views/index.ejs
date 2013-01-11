@@ -1,22 +1,22 @@
 <html>
     <head>
-        <title>donelist</title>
+        <title>Stratus</title>
         
         <link rel="stylesheet" type="text/css" href="static/style.css"></link>
 
         <script type="text/javascript" src="static/scripts/require.js" data-main="static/scripts/main.js"></script>
     </head>
     <body>
-        <script type="text/template" id="list-item">
+        <script type="text/template" id="event">
             <li>
                 <h3><%- name %></h3>
                 <p><%- details %></p>
             </li>
         </script>
-        <script type="text/template" id="item-creation">
-            <form class="item-creation">
-                <input type="text" class="event-name" placeholder="Event Name..."></input>
-                <textarea class="event-details" placeholder="Event details go here..."></textarea>
+        <script type="text/template" id="event-creation">
+            <form id="item-creation">
+                <input type="text" class="event-name" placeholder="Event Name..."></input><br />
+                <textarea class="event-details" placeholder="Event details go here..."></textarea><br />
                 <input type="button" class="create-event" value="Create Event"></input>
             </form>
         </script>
