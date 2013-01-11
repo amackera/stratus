@@ -1,14 +1,12 @@
 define(['backbone', 'marionette'], function(Backbone, Marionette) {
     return Backbone.View.extend({
-        template: '#item-creation',
+        template: '#event-creation',
 
         events: {
             'click input.create-event': 'create_event'
         },
 
-        initialize: function() {
-            this.render();
-        },
+        initialize: function() {},
 
         render: function() {
             var rendered_template = _.template($(this.template).html())();        
