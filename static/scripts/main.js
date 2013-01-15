@@ -29,13 +29,26 @@ require.config({
 define([
     'jquery',
     'backbone', 
-    'marionette', 
     'collections/event/event', 
-    'views/event/creation'
-], function($, Backbone, Marionette, EventCollection, EventCreationView) {
+    'views/event/creation',
+    'views/event/event_collection'
+], function($, Backbone, EventCollection, EventCreationView, EventCollectionView) {
     $(document).ready(function() {
         // List of downtime events
-        var event_collection = new EventCollection();
+        window.event_collection = new EventCollection([
+            {
+                title: 'Cottontail load problems',
+                description: 'Automated load warnings triggered alerts regarding load on our Cottontail server.'
+            },
+            {
+                title: 'CDN leaf node stale cache',
+                description: 'A problem with stale media in one of our CDN leaf nodes caused clients to not see updating application media.'
+            }
+        ]);
+
+        // View for event collection
+        var event_collection_view = new EventCollectionView({ collection: event_collection });
+        $(document).find('body').append(event_collection_view.render().el);
 
         // Form to create new downtime events
         var event_creation_view = new EventCreationView({ collection: event_collection });
