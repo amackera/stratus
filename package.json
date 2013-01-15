@@ -13,6 +13,7 @@
         "ejs": "0.8.x"
     },
     "devDependencies": {
-        "mocha": "1.4.2"
+        "mocha": "1.4.2",
+        "mocha-phantomjs": "1.1.2"
     }
 }
