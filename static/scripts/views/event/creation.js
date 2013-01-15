@@ -16,11 +16,11 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
 
         create_event: function(e) {
             e.preventDefault();
-            var name = this.$el.find('.event-name').val();
-            var details = this.$el.find('.event-details').val();
+            var title = this.$el.find('.event-title').val();
+            var description = this.$el.find('.event-description').val();
             this.collection.add({ 
-                name: name,
-                details: details
+                title: title,
+                description: description
             });
         }
     });
