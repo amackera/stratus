@@ -4,7 +4,7 @@ Open-source status utility to report vital system statistics.
 
 # Goals
 
-- Get real-time updates about possible service outage
+- Get updates about possible service outage
 - Some important system statistics, broken down daily, weekly, monthly
  - Average response time
  - Error rates
@@ -13,10 +13,11 @@ Open-source status utility to report vital system statistics.
 # .plan
 
 - Basic editable timeline
+- Persistence
 - Authentication
-- Integration with AWS CloudWatch
-- Integration with Nagios
-- Plugin-type system
+- REST API for events
+- REST API for analytics
+- Show graphs on client
 
 # Architecture
 
