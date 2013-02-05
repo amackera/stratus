@@ -1,4 +1,37 @@
-form.item-creation input,
-form.item-creation textarea {
+textarea.event-description,
+input.event-title {
     display: block;
+    width: 400px;
+}
+
+textarea.event-description {
+    height: 75px;
+}
+
+div#container {
+    width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+ul.event-list {
+    width: 400px;
+    padding-left: 0px;
+}
+
+ul.event-list h3,
+ul.event-list h4 {
+    font-family: Helvetica;
+}
+
+ul.event-list p {
+    font-family: Helvetica;
+}
+
+ul.event-list {
+    list-style-type: none;
+}
+
+li.event-item {
+    border-bottom: 1px solid black;
 }
