@@ -8,17 +8,23 @@
     </head>
     <body>
         <script type="text/template" id="event">
-            <li>
+            <li class='event-item'>
                 <h3><%- title %></h3>
+                <h4><%- date %></h4>
                 <p><%- description  %></p>
             </li>
         </script>
+        <script type="text/template" id="no-event">
+            <p>No events have been reported</p>
+        </script>
         <script type="text/template" id="event-creation">
             <form id="item-creation">
-                <input type="text" class="event-title" placeholder="Event Title..."></input><br />
-                <textarea class="event-description" placeholder="Event description goes here..."></textarea><br />
+                <input type="text" class="event-title" placeholder="Event Title..."></input>
+                <textarea class="event-description" placeholder="Event description goes here..."></textarea>
                 <input type="button" class="create-event" value="Create Event"></input>
             </form>
         </script>
+        <div id="container">
+        </div>
     </body>
 </html>
