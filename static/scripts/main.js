@@ -38,10 +38,12 @@ define([
         window.event_collection = new EventCollection([
             {
                 title: 'Cottontail load problems',
+                date: 'January 28, 2013',
                 description: 'Automated load warnings triggered alerts regarding load on our Cottontail server.'
             },
             {
                 title: 'CDN leaf node stale cache',
+                date: 'February 5, 2013',
                 description: 'A problem with stale media in one of our CDN leaf nodes caused clients to not see updating application media.'
             }
         ]);
