@@ -20,5 +20,7 @@ app.get('/', function(req, res) {
     res.render('index.ejs');
 });
 
+console.log('listening on port ', process.env.PORT || 5000);
+
 // Listen for HTTP requests
 app.listen(process.env.PORT || 5000);
