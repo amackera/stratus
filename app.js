@@ -8,6 +8,7 @@ var app = module.exports = express();
 app.set('views', __dirname + '/views');
 app.engine('ejs', ejs.__express);
 app.use('/static', express.static(__dirname + '/static'));
+app.use(express.bodyParser());
 app.disable('view cache');
 
 
