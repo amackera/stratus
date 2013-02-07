@@ -22,6 +22,12 @@ ul.event-list {
 ul.event-list h3,
 ul.event-list h4 {
     font-family: Helvetica;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+ul.event-list h3 {
+    margin-top: 20px;
 }
 
 ul.event-list p {
