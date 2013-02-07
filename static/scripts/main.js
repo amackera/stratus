@@ -1,6 +1,7 @@
 require.config({
     paths: {
         jquery: 'lib/jquery.min',
+        bootstrap: 'lib/bootstrap.min.js',
         backbone: 'lib/backbone.min',
         underscore: 'lib/underscore.min',
         marionette: 'lib/backbone.marionette.min',
@@ -12,7 +13,12 @@ require.config({
         jquery: {
             exports: 'jQuery'
         },
+        bootstrap: {
+            deps: ['jquery'],
+            exports: 'Bootstrap'
+        },
         underscore: {
+            deps: ['jquery'],
             exports: '_'
         },
         backbone: {
