@@ -42,6 +42,7 @@ define([
     $(document).ready(function() {
         // List of downtime events
         window.event_collection = new EventCollection([
+            /*
             {
                 title: 'Cottontail load problems',
                 date: 'January 28, 2013',
@@ -52,6 +53,7 @@ define([
                 date: 'February 5, 2013',
                 description: 'A problem with stale media in one of our CDN leaf nodes caused clients to not see updating application media.'
             }
+            */
         ]);
 
         // View for event collection
@@ -63,16 +65,3 @@ define([
         $(document).find('div#event-list').append(event_creation_view.render().$el);
     });
 });
-
-/*
-function initialize_app() {
-    // Add a list of downtime events to the page
-    var event_list = new ListCollection();
-    var event_list_view = new ListView({ collection: event_list });
-    $(document).find('body').append(event_list_view.render().$el);
-
-    // Add a form to create new downtime events
-    var creation_view = new ItemCreationView({ collection: event_list });
-    $(document).find('body').append(creation_view.$el);
-}
-*/
