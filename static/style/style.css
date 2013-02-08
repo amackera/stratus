@@ -4,34 +4,17 @@ input.event-title {
     width: 400px;
 }
 
+div.container {
+    margin-top: 60px;
+}
+
 textarea.event-description {
     height: 75px;
 }
 
-div#container {
-    width: 900px;
-    margin: auto;
-    margin-top: 50px;
-}
-
 ul.event-list {
-    width: 400px;
     padding-left: 0px;
-}
-
-ul.event-list h3,
-ul.event-list h4 {
-    font-family: Helvetica;
-    margin-bottom: 2px;
-    margin-top: 5px;
-}
-
-ul.event-list h3 {
-    margin-top: 20px;
-}
-
-ul.event-list p {
-    font-family: Helvetica;
+    margin-left:0px;
 }
 
 ul.event-list {

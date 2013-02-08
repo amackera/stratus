@@ -3,8 +3,8 @@
     <head>
         <title>Stratus</title>
         
-        <!--<link rel="stylesheet" type="text/css" href="static/style.css"></link>-->
-        <link rel="stylesheet" type="text/css" href="static/bootstrap.css" media="screen"></link>
+        <link rel="stylesheet" type="text/css" href="static/style/style.css"></link>
+        <link rel="stylesheet" type="text/css" href="static/style/bootstrap.min.css" media="screen"></link>
 
         <script type="text/javascript" src="static/scripts/require.js" data-main="static/scripts/main.js"></script>
     </head>
@@ -23,10 +23,24 @@
             <form id="item-creation">
                 <input type="text" class="event-title" placeholder="Event Title..."></input>
                 <textarea class="event-description" placeholder="Event description goes here..."></textarea>
-                <input type="button" class="create-event" value="Create Event"></input>
+                <button type="submit" class="create-event btn">Create Event</button>
             </form>
         </script>
-        <div id="container">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="event-list" class="span6">
+                </div>
+                <div class="span6">
+                    <p>todo...</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

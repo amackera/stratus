@@ -56,11 +56,11 @@ define([
 
         // View for event collection
         var event_collection_view = new EventCollectionView({ collection: event_collection });
-        $(document).find('div#container').append(event_collection_view.render().el);
+        $(document).find('div#event-list').append(event_collection_view.render().el);
 
         // Form to create new downtime events
         var event_creation_view = new EventCreationView({ collection: event_collection });
-        $(document).find('div#container').append(event_creation_view.render().$el);
+        $(document).find('div#event-list').append(event_creation_view.render().$el);
     });
 });
 
