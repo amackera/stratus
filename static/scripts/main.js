@@ -6,7 +6,8 @@ require.config({
         underscore: 'lib/underscore.min',
         marionette: 'lib/backbone.marionette.min',
         views: 'views/',
-        models: 'models/'
+        models: 'models/',
+        modules: 'modules/'
     },
 
     shim: {
@@ -35,33 +36,8 @@ require.config({
 define([
     'jquery',
     'backbone', 
-    'collections/event/event', 
-    'views/event/creation',
-    'views/event/event_collection'
-], function($, Backbone, EventCollection, EventCreationView, EventCollectionView) {
-    $(document).ready(function() {
-        // List of downtime events
-        window.event_collection = new EventCollection([
-            /*
-            {
-                title: 'Cottontail load problems',
-                date: 'January 28, 2013',
-                description: 'Automated load warnings triggered alerts regarding load on our Cottontail server.'
-            },
-            {
-                title: 'CDN leaf node stale cache',
-                date: 'February 5, 2013',
-                description: 'A problem with stale media in one of our CDN leaf nodes caused clients to not see updating application media.'
-            }
-            */
-        ]);
-
-        // View for event collection
-        var event_collection_view = new EventCollectionView({ collection: event_collection });
-        $(document).find('div#event-list').append(event_collection_view.render().el);
-
-        // Form to create new downtime events
-        var event_creation_view = new EventCreationView({ collection: event_collection });
-        $(document).find('div#event-list').append(event_creation_view.render().$el);
-    });
+    'app',
+    'modules/events'
+], function($, Backbone, Stratus) {
+    Stratus.start();
 });
