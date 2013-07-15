@@ -19,6 +19,11 @@ Open-source status utility to report vital system statistics.
 - REST API for analytics
 - Show graphs on client
 
+# Usage
+
+- `npm test` will run the test cases
+- `npm start` will run the app, default on port 5000
+
 # Architecture
 
 - Node.js powered server
