@@ -1,4 +1,4 @@
-var express = require('express')
+var express = require('express'),
     ejs = require('ejs'),
     passport = require('passport'),
     GoogleStrategy = require('passport-google').Strategy,
@@ -14,6 +14,7 @@ app.set('views', __dirname + '/views');
 app.engine('ejs', ejs.__express);
 app.use('/static', express.static(__dirname + '/static'));
 app.use(express.bodyParser());
+app.use(passport.initialize());
 app.disable('view cache');
 
 var server = new mongo.Server('localhost', process.env.DB_PORT || 27017, {auto_reconnect: true});
@@ -21,7 +22,7 @@ var users = new mongo.Db('users', server, {fsync: true});
 
 passport.use(new GoogleStrategy({
         returnURL: 'http://localhost:5000/auth/google/return',
-        realm: 'localhost'
+        realm: 'http://localhost:5000/'
     },
     function (identifier, profile, done) {
         users.findOrCreate({ openId: identifier }, function(err, user) {
