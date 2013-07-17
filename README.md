@@ -12,11 +12,13 @@ Open-source status utility to report vital system statistics.
 
 # .plan
 
-- Basic editable timeline
-- Persistence
-- Authentication
-- REST API for events
-- REST API for analytics
+- DONE - Basic editable timeline
+- WIP - Authentication
+- WIP - REST API for events
+- WIP - REST API for analytics
+- Multiple projects
+- User roles and authorization
+- Automatically tweet when something bad happens
 - Show graphs on client
 
 # Usage
