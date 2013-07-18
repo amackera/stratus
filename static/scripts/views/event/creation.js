@@ -3,7 +3,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
         template: '#event-creation',
 
         events: {
-            'click input.create-event': 'create_event'
+            'click button.create-event': 'create_event'
         },
 
         initialize: function() {},
