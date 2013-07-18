@@ -1,5 +1,6 @@
 define(['backbone'], function(Backbone) {
     return Backbone.Model.extend({
+        url: '/api/v1/events',
         defaults: {
             title: 'New event',
             duration: 0,
