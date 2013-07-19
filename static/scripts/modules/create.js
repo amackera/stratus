@@ -10,6 +10,6 @@ define([
             collection: options.event_collection
         });
 
-        $(document).find('div#event-list').append(event_creation_view.render().$el);
+        $(document).find('ul.event-list').before(event_creation_view.render().$el);
     });
 });
