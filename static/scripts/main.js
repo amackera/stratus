@@ -38,6 +38,7 @@ define([
     'backbone', 
     'app',
     'modules/events'
-], function($, Backbone, Stratus) {
+], function($, Backbone, Stratus, Events) {
+    // start the app, this also starts the 'events' module
     Stratus.start();
 });
