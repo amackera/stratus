@@ -1,6 +1,14 @@
 var app = require('../app.js'),
     passport = require('passport'),
-    mongo = require('mongodb');
+    mongo = require('mongodb'),
+    Twit = require('twit');
+
+var tweet = new Twit({
+    consumer_key:         'iU8bgegSDBusXjmAFZAmg',
+    consumer_secret:      'iYZMdeGh9g83atKNV1dquOrQIw5LNlzwy8nnj30',
+    access_token:         '1606658269-OsMNxG4NfmM3gFJ8W6Tpeea6vK3GG4IeFzsHroE',
+    access_token_secret:  'CVAs1Apo8H6peVah4xO42yfQvZf4xddQQ4NIKZjtdqA'
+});
 
 app.get('/api/v1/events', function(req, resp) {
     app.db.collection('events', function(err, collection) {
@@ -38,6 +46,13 @@ app.post('/api/v1/events', function(req, resp) {
                 resp.send({'error': 'Unable to insert!'});
             } else {
                 console.log('success adding event');
+                console.log('tweeting event');
+                tweet.post('statuses/update', {
+                    status: event.title + ': ' + event.description + '. See https://status.tophat.com for updates.'
+                }, function(err, reply) {
+                    console.log('tweet successful');
+                });
+
                 resp.send(result[0]);
             }
         });
