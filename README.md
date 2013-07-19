@@ -30,4 +30,5 @@ Open-source status utility to report vital system statistics.
 
 - Node.js powered server
 - Backbone.js powered client
+- MongoDB data persistence
 - Coffee powered developer
