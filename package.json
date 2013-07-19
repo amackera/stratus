@@ -13,7 +13,8 @@
         "ejs": "0.8.x",
         "mongodb": "1.2.x",
         "passport": "0.1.x",
-        "passport-google": "0.3.x"
+        "passport-google": "0.3.x",
+        "connect-roles": "2.1.x"
     },
     "devDependencies": {
         "mocha": "1.4.2",
