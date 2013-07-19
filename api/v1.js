@@ -19,13 +19,16 @@ app.get('/api/v1/events/:id', function(req, resp) {
     });
 });
 
-app.post('/api/v1/events', passport.authenticate('google'), function(req, resp) {
+app.post('/api/v1/events', function(req, resp) {
+    /* TODO: Add this back in! Also req.isAuthenticated()
+     *
     // REALLY basic auth
     if (!req.user || !req.user.role || req.user.role != 'admin') {
         resp.status = 403;
         resp.send('Access Denied');
         return;
     }
+    */
 
     var event = req.body;
     console.log('adding new event: ', event);

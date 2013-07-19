@@ -92,14 +92,14 @@ app.get('/', function (req, resp) {
     resp.render('index.ejs');
 });
 
-app.get('/admin', ensureAuthenticated, function (req, resp) {
+app.get('/admin', /* app.ensureAuthenticated, */ function (req, resp) {
     resp.render('admin.ejs');
 });
 
-function ensureAuthenticated(req, res, next) {
+app.ensureAuthenticated = function (req, res, next) {
     if (req.isAuthenticated()) { return next(); }
     res.redirect('/auth/google');
-}
+};
 
 console.log('listening on port ', process.env.PORT || 5000);
 
