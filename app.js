@@ -88,8 +88,12 @@ app.get('/failed', function (req, resp) {
 ['v1'].forEach(function(ver) { require('./api/'+ver); });
 
 // Index route
-app.get('/', function(req, res) {
-    res.render('index.ejs');
+app.get('/', function (req, resp) {
+    resp.render('index.ejs');
+});
+
+app.get('/admin', ensureAuthenticated, function (req, resp) {
+    resp.render('admin.ejs');
 });
 
 function ensureAuthenticated(req, res, next) {

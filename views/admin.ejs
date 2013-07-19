@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stratus</title>
+        
+        <link rel="stylesheet" type="text/css" href="static/style/style.css"></link>
+        <link rel="stylesheet" type="text/css" href="static/style/bootstrap.min.css" media="screen"></link>
+
+        <script type="text/javascript" src="static/scripts/require.js" data-main="static/scripts/main.js"></script>
+    </head>
+    <body>
+        <script type="text/template" id="event">
+            <li class='event-item'>
+                <h3><%- title %></h3>
+                <h4><%- date %></h4>
+                <p><%- description  %></p>
+            </li>
+        </script>
+        <script type="text/template" id="no-event">
+            <p>No events have been reported...</p>
+        </script>
+        <script type="text/template" id="event-creation">
+            <form id="item-creation">
+                <input type="text" class="event-title" placeholder="Event title..."></input>
+                <textarea class="event-description" placeholder="Event description..."></textarea>
+                <button type="submit" class="create-event btn">Create Event</button>
+            </form>
+        </script>
+        <script type="text/template" id="loading">
+            <img src='static/images/loading_big.gif' alt='Loading...' />
+        </script>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="event-list" class="span6 offset2">
+                </div>
+                <!--
+                <div class="span6">
+                    <p>todo...</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </body>
+</html>
