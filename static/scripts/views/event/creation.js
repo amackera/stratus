@@ -22,14 +22,17 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
             this.$el.html($('#loading').html());
             this.collection.create({ 
                 title: title,
-                description: description
+                description: description,
+                date: Date.now()
             }, {
                 wait: true,
                 success: function (model, response, options) {
                     this.render();
+                    console.log(this.collection.models);
                 }.bind(this),
                 error: function (model, xhr, options) {
-
+                    console.log('ERROR!');
+                    this.render();
                 }
             });
         }
