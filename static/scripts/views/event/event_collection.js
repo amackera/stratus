@@ -8,6 +8,9 @@ function(Backbone, Marionette, EventView, NoEventView) {
         itemView: EventView,
         emptyView: NoEventView,
         className: 'event-list',
-        tagName: 'ul'
+        tagName: 'ul',
+        appendHtml: function (collectionView, itemView, index) {
+            collectionView.$el.prepend(itemView.el);
+        }
     });
 });
