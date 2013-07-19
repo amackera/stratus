@@ -35,3 +35,7 @@ app.post('/api/v1/events', function(req, resp) {
         });
     });
 });
+
+app.get('/api/v1/users', function(req, resp) {
+    
+});
