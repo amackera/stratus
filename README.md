@@ -13,13 +13,17 @@ Open-source status utility to report vital system statistics.
 # .plan
 
 - DONE - Basic editable timeline
-- WIP - Authentication (Passport.js)
-- WIP - User roles and authorization (Connect-roles)
+- DONE - Authentication (Passport.js)
+- DONE - User roles and authorization (Connect-roles)
+    - This could be better... requires manually updating users in DB shell...
 - DONE - REST API for events
-- REST API for analytics
+- Event updates for admins
+- Commenting on events for logged in users
 - Multiple projects
+    - BADLY NEEDED!
 - Automatically tweet when something bad happens
-- Show graphs on client
+- REST API for analytics
+- Show graphs for analytics on client
 
 # Usage
 
