@@ -6,8 +6,8 @@ Open-source status utility to report vital system statistics.
 
 - Get updates about possible service outage
 - Some important system statistics, broken down daily, weekly, monthly
- - Average response time
- - Error rates
+    - Average response time
+    - Error rates
 - Review historical service outage events
 
 # .plan
@@ -17,11 +17,11 @@ Open-source status utility to report vital system statistics.
 - DONE - User roles and authorization (Connect-roles)
     - This could be better... requires manually updating users in DB shell...
 - DONE - REST API for events
-- Event updates for admins
+- DONE - Automatically tweet when something bad happens
+- DONE - Event updates for admins
 - Commenting on events for logged in users
 - Multiple projects
     - BADLY NEEDED!
-- Automatically tweet when something bad happens
 - REST API for analytics
 - Show graphs for analytics on client
 
