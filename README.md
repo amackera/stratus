@@ -14,12 +14,18 @@ Open-source status utility to report vital system statistics.
 
 - DONE - Basic editable timeline
 - DONE - Authentication (Passport.js)
-- DONE - User roles and authorization (Connect-roles)
+- DONE - User roles and authorization
     - This could be better... requires manually updating users in DB shell...
 - DONE - REST API for events
 - DONE - Automatically tweet when something bad happens
 - DONE - Event updates for admins
+- Updating events
+    - Severity
+    - Duration
 - Commenting on events for logged in users
+- Automatic uptime calculation
+    - Monthly
+    - Annually
 - Multiple projects
     - BADLY NEEDED!
 - REST API for analytics
